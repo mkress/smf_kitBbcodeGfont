@@ -10,6 +10,7 @@
 *******************************************************************************/
 
 $txt['kitbbcodegfont_mod'] = 'BBcode Google Web Fonts';
+$txt['kitbbcodegfont_guest'] = 'Show/Hide Google Web Fonts to guests';
 $txt['kitbbcodegfont_guest_show'] = 'Show Google Web Fonts to guests';
-$txt['kitbbcodegfont_guest_hide'] = 'Hide Google Web Fonts to guests';
+$txt['kitbbcodegfont_guest_hide'] = 'Hide Google Web Fonts to guests (faster page load / SEO)';
 ?>
