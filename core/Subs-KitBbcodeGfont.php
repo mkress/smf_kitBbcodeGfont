@@ -6,7 +6,7 @@
 ********************************************************************************
 * License http://creativecommons.org/licenses/by-sa/3.0/deed.de CC BY-SA 	   *
 * Support for this software  http://kress.it and							   *
-* http://custom.simplemachines.org/mods/index.php?mod=3393					   *
+* http://custom.simplemachines.org/mods/index.php?mod=3478					   *
 *******************************************************************************/
 
 if (!defined('SMF'))
@@ -50,7 +50,20 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 				// only insert link-tag once per page
 				if ( !isset($context[\'gfont-data\'][$data]) )
 				{
-					$tag[\'before\'] = \'<link href="http://fonts.googleapis.com/css?family=$1" rel="stylesheet" type="text/css" />\'.$tag[\'before\'];
+					$tag[\'before\'] = \'<script type="text/javascript">
+					WebFontConfig = {
+						google: { families: [ "\'.urlencode($data).\'::latin"] }
+					};
+					(function() {
+						var wf = document.createElement("script");
+						wf.src = ("https:" == document.location.protocol ? "https" : "http") +
+							"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
+						wf.type = "text/javascript";
+						wf.async = "true";
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(wf, s);
+					})(); 
+					</script>\'.$tag[\'before\'];
 					$context[\'gfont-data\'][$data] = $data;
 				}
 			')

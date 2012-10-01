@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
-* BBCode Google Web Fonts Copyright 2012, Markus Kress - Kress.IT							       *
+* BBCode Google Web Fonts Copyright 2012, Markus Kress - Kress.IT		       *
 ********************************************************************************
-* uninstall.php																	   *
+* uninstall.php																   *
 ********************************************************************************
 * License http://creativecommons.org/licenses/by-sa/3.0/deed.de CC BY-SA 	   *
 * Support for this software  http://kress.it and							   *
-* http://custom.simplemachines.org/mods/index.php?mod=					   *
+* http://custom.simplemachines.org/mods/index.php?mod=3478					   *
 *******************************************************************************/
 
 if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF'))

@@ -12,4 +12,4 @@ http://creativecommons.org/licenses/by-sa/3.0/deed.de CC BY-SA
 -
 #### Support 
 1. http://kress.it and
-2. http://custom.simplemachines.org/mods/index.php?mod=
+2. http://custom.simplemachines.org/mods/index.php?mod=3478
