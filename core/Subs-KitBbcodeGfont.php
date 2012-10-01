@@ -52,7 +52,7 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 				{
 					$tag[\'before\'] = \'<script type="text/javascript">
 					WebFontConfig = {
-						google: { families: [ "\'.urlencode($data).\'::latin"] }
+						google: { families: [ "\'.urlencode($data).\'"] }
 					};
 					(function() {
 						var wf = document.createElement("script");
