@@ -50,9 +50,26 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 				// only insert link-tag once per page
 				if ( !isset($context[\'gfont-data\'][$data]) )
 				{
+					// build charsets
+					$charsets = array(\'latin\');
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_latin_ext\') )
+					{
+						$charsets[] = \'latin-ext\';
+					}
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_greek\') )
+					{
+						$charsets[] = \'greek\';
+						$charsets[] = \'greek-ext\';
+					}
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_cyrillic\') )
+					{
+						$charsets[] = \'cyrillic\';
+						$charsets[] = \'cyrillic-ext\';
+					}
+					
 					$tag[\'before\'] = \'<script type="text/javascript">
 					WebFontConfig = {
-						google: { families: [ "\'.urlencode($data).\'"] }
+						google: { families: [ "\' . urlencode($data) . \'::\' . implode(\',\', $charsets) . \'"] }
 					};
 					(function() {
 						var wf = document.createElement("script");
@@ -90,5 +107,26 @@ function kit_bbcodegfont_mod_settings(&$config_vars)
 				1 => $txt['kitbbcodegfont_guest_hide']
 		),
 		$txt['kitbbcodegfont_guest']
+	);
+	
+	$config_vars[] = $txt['kitbbcodegfont_mod_charsets'];
+	//charsets
+	$config_vars[] = array(
+			'check',
+			'kitbbcodegfont_charset_latin_ext',
+			'',
+			$txt['kitbbcodegfont_charset_latin_ext']
+	);
+	$config_vars[] = array(
+			'check',
+			'kitbbcodegfont_charset_greek',
+			'',
+			$txt['kitbbcodegfont_charset_greek']
+	);
+	$config_vars[] = array(
+			'check',
+			'kitbbcodegfont_charset_cyrillic',
+			'',
+			$txt['kitbbcodegfont_charset_cyrillic']
 	);
 }
