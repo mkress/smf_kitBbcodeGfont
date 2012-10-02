@@ -40,7 +40,7 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 			'after' => '</span>',
 			'validate' => create_function('&$tag, &$data, $disabled', '
 				// Access globals
-				global $context;
+				global $context, $modSettings;
 				
 				// use as temporary cache
 				if ( !isset($context[\'gfont-data\']) )
@@ -52,16 +52,16 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 				{
 					// build charsets
 					$charsets = array(\'latin\');
-					if ( !empty($modSettings[\'kitbbcodegfont_charset_latin_ext\') )
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_latin_ext\']) )
 					{
 						$charsets[] = \'latin-ext\';
 					}
-					if ( !empty($modSettings[\'kitbbcodegfont_charset_greek\') )
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_greek\']) )
 					{
 						$charsets[] = \'greek\';
 						$charsets[] = \'greek-ext\';
 					}
-					if ( !empty($modSettings[\'kitbbcodegfont_charset_cyrillic\') )
+					if ( !empty($modSettings[\'kitbbcodegfont_charset_cyrillic\']) )
 					{
 						$charsets[] = \'cyrillic\';
 						$charsets[] = \'cyrillic-ext\';
