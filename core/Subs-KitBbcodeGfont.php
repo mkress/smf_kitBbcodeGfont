@@ -95,7 +95,7 @@ function kit_bbcodegfont_mod_settings(&$config_vars)
 
 	loadLanguage('KitBbcodeGfont');
 
-	$config_vars[] = '';
+	$config_vars[] = '&nbsp;';
 	$config_vars[] = $txt['kitbbcodegfont_mod'];
 
 	// style
