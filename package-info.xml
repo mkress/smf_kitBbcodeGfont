@@ -10,6 +10,7 @@
 		<readme parsebbc="true">readme/readme.txt</readme>
 		<require-dir name="default/languages" destination="$themedir" />
 		<require-file name="core/Subs-KitBbcodeGfont.php" destination="$sourcedir" />
+		<require-file name="default/images/gfont.gif" destination="$themedir/images/bbc" />
 		<code>install.php</code>
 		<redirect url="$scripturl?action=admin;area=modsettings" timeout="1000" />
 	</install>
@@ -19,6 +20,7 @@
 		<remove-file name="$sourcedir/Subs-KitBbcodeGfont.php" />
 		<remove-dir name="$languagedir/KitBbcodeGfont.english.php" />
 		<remove-dir name="$languagedir/KitBbcodeGfont.german.php" />
+		<remove-file name="$themedir/images/bbc/gfont.gif" />
 		<redirect url="$scripturl?action=admin;area=packages;sa=browse" timeout="1000" />
 	</uninstall>
 	

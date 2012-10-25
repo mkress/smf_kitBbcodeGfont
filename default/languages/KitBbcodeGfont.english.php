@@ -19,4 +19,6 @@ $txt['kitbbcodegfont_charset_latin_ext'] = 'latin special charset';
 $txt['kitbbcodegfont_charset_greek'] = 'greek charset';
 $txt['kitbbcodegfont_charset_cyrillic'] = 'cyrillic charset';
 
+$txt['kitbbcodegfont_bbc_gfont'] = 'Google Web Fonts';
+
 ?>

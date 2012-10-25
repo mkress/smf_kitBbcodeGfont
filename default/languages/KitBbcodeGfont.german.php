@@ -18,4 +18,7 @@ $txt['kitbbcodegfont_mod_charsets'] = 'Erweiterte (nur im Bedarf verwenden - erh
 $txt['kitbbcodegfont_charset_latin_ext'] = 'Latin Sonderzeichen';
 $txt['kitbbcodegfont_charset_greek'] = 'Griechische Schriftzeichen';
 $txt['kitbbcodegfont_charset_cyrillic'] = 'Kyrillische Schriftzeichen';
+
+$txt['kitbbcodegfont_bbc_gfont'] = 'Google Web Schriftarten';
+
 ?>

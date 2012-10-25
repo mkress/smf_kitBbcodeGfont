@@ -20,7 +20,8 @@ if ((SMF == 'SSI') && !$user_info['is_admin'])
 $hooks = array(
 	'integrate_pre_include' => '$sourcedir/Subs-KitBbcodeGfont.php',
 	'integrate_bbc_codes' => 'kit_bbcode_gfont_bbc_codes',
-	'integrate_general_mod_settings' => 'kit_bbcodegfont_mod_settings'
+	'integrate_bbc_buttons' => 'kit_bbcode_gfont_bbc_buttons',
+	'integrate_general_mod_settings' => 'kit_bbcode_gfont_mod_settings'
 );
 
 foreach ($hooks as $hook => $function)

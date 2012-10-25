@@ -88,8 +88,24 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 	}
 }
 
+// bbc button
+function kit_bbcode_gfont_bbc_buttons(&$bbcTags)
+{
+	loadLanguage('KitBbcodeGfont');
+	
+	$newCode = array(array(
+			'image' => 'gfont',
+			'code' => 'gfont',
+			'before' => '[gfont=Finger Paint]',
+			'after' => '[/gfont]',
+			'description' => $txt['kitbbcodegfont_bbc_gfont']
+	));
+	
+	array_splice( $bbcTags[0], 4, 0, $newCode );
+}
+
 // mod settings
-function kit_bbcodegfont_mod_settings(&$config_vars)
+function kit_bbcode_gfont_mod_settings(&$config_vars)
 {
 	global $context, $modSettings, $txt;
 
