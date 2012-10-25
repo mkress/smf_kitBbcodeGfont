@@ -91,6 +91,8 @@ function kit_bbcode_gfont_bbc_codes( &$codes )
 // bbc button
 function kit_bbcode_gfont_bbc_buttons(&$bbcTags)
 {
+	global $txt;
+	
 	loadLanguage('KitBbcodeGfont');
 	
 	$newCode = array(array(
